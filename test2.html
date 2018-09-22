@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    var arr = [1,2,3]
+    var nodeList = document.getElementsByTagName('li')
+    var $a = $('li')
+
+    function each(data) {
+      var $data = $(data)
+      $data.each(function(key, val) {
+        console.log(key, val)
+      })
+    }
+
+    each(arr)
+    each(nodeList)
+    each($a)
+
+    /*var ul = document.getElementById('ul')
+    ul.addEventListener('click', function(e) {
+      var target = e.target;
+      if(target.nodeName === 'LI') {
+        alert(target.innerHTML)
+      }
+    })*/
+
+    /*var callbacks = $.Callbacks()
+    callbacks.add(function(info) {
+      console.log('fn1', info)
+    })
+    callbacks.add(function(info) {
+      console.log('fn2', info)
+    })
+    callbacks.add(function(info) {
+      console.log('fn3', info)
+    })
+
+    callbacks.fire('go')
+    callbacks.fire('fire')*/
+    
+  </script>
+</body>
+</html>

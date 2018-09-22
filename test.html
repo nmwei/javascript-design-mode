@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>顺序: {{message}}</p>
+    <p>逆序: {{reverseMessage}}</p>
+  </div>
+  <script src = "https://cdn.bootcss.com/vue/2.5.14/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello'
+      },
+      computed: {
+          reverseMessage: function() {
+            return this.message.split('').reverse().join('')
+          }
+        }
+    })
+  </script>
+</body>
+</html>
