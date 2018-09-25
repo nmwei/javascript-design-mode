@@ -2,7 +2,7 @@
 ### [Javascript 设计模式系统讲解与应用](https://coding.imooc.com/class/chapter/255.html)
 ## 项目运行
 ### 1. 开启http-server服务
-#### `cd src/demo`
+#### `cd src/example/shopping`
 #### `http-server -p 8880`
 ### 2. 开启webpack服务 
 #### `npm run dev`
