@@ -15,7 +15,7 @@ class User {
 }
 
 let u1 = new User('member') 
-//u1.buy()
+u1.buy() //会员用户购买
 
 class OridinaryUser {
   buy() {
@@ -52,26 +52,19 @@ class UserManager {
 const m = new UserManager()
 const u = new OridinaryUser()
 m.setUser(u)
-m.userBuy() //u2.buy()
+m.userBuy() //普通用户购买
 
-
-class Color {
-  constructor(name) {
-    this.name = name
+const strategies = {
+  oridinary() {
+    console.log('普通用户购买')
+  },
+  member() {
+    console.log('会员用户购买')
+  },
+  vip() {
+    console.log('vip 用户购买')
   }
 }
 
-class Shape {
-  constructor(name, color) {
-    this.name = name
-    this.color = color
-  }
-
-  draw() {
-    console.log(`${this.color.name} ${this.name}`)
-  }
-}
-
-let red = new Color('red')
-let circle = new Shape('circle', red)
-circle.draw() //red circle
+const userBuy = user => strategies[user]()
+userBuy('member') //会员用户购买
